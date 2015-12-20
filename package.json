@@ -2,7 +2,7 @@
   "name": "hello-pluralsighters",
   "private": true,
   "version": "0.0.1",
-  "description": "Practice app for Pluralsight Docker CI course",
+  "description": "Demo app for Pluralsight Docker CI course",
   "main": "app.js",
   "author": "Nigel Poulton <nigelpoulton@hotmail.com>",
   "license": "You'd have to be mad to use this in production :-D",
