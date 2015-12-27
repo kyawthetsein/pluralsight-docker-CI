@@ -1,4 +1,4 @@
-FROM centos:centos6
+FROM FROM ubuntu:14.04
 
 MAINTAINER nigelpoulton@hotmail.com
 
@@ -6,7 +6,7 @@ MAINTAINER nigelpoulton@hotmail.com
 RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 
 # Install Node...
-RUN yum install -y npm
+RUN apt-get install -y npm
 
 # Copy app to /src
 COPY . /src
