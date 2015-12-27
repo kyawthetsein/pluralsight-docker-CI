@@ -1,4 +1,4 @@
-FROM FROM ubuntu:14.04
+FROM FROM ubuntu:12.04
 
 MAINTAINER nigelpoulton@hotmail.com
 
