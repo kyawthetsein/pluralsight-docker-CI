@@ -1,7 +1,8 @@
 { 
   "variables": {
     "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
-    "aws_secret_key": "{{env `AWS_SECRET_KEY`}}"
+    "aws_secret_key": "{{env `AWS_SECRET_KEY`}}",
+    "artifact_token": "{{env `ARTIFACT_TOKEN`}}"
   },
   "builders": [
     {
@@ -18,8 +19,12 @@
   "post-processors": [
     {
       "type": "atlas",
-      "artifact": "hashicorp/logstream",
-      "artifact_type": "amazon.ami"
+      "token": "{{user `artifact_token`}}",
+      "artifact": "kyawthetsein/packer2",
+      "artifact_type": "amazon.ami",
+      "metadata": {
+          "created_at": "{{timestamp}}"
+        }
     }
   ]
   
