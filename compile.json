@@ -21,6 +21,6 @@
       "artifact": "hashicorp/logstream",
       "artifact_type": "amazon.ami"
     }
-]
+  ]
 
 }
