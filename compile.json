@@ -15,5 +15,12 @@
       "ami_name": "packer {{timestamp}}"
     }
   ]
+  "post-processors": [
+    {
+      "type": "atlas",
+      "artifact": "hashicorp/logstream",
+      "artifact_type": "amazon.ami"
+    }
+]
 
 }
