@@ -1,9 +1,13 @@
-{
+{ 
+  "variables": {
+    "aws_access_key": "ENV['AWS_ACCESS_KEY_ID']",
+    "aws_secret_key": "ENV['AWS_SECRET_KEY']"
+  },
   "builders": [
     {
       "type": "amazon-ebs",
-      "access_key": "ENV['AWS_ACCESS_KEY_ID']",
-      "secret_key": "ENV['AWS_SECRET_KEY']",
+      "access_key": "{{kyawthetsein `aws_access_key`}}",
+      "secret_key": "{{kyawthetsein `aws_secret_key`}}",
       "region": "us-west-2",
       "source_ami": "ami-5189a661",
       "instance_type": "t2.micro",
