@@ -1,7 +1,7 @@
 resource "atlas_artifact" "packer2" {
   name = "kyawthetsein/packer2"
   type = "amazon.ami"
-  version = "1"
+  version = "latest"
 }
 
 resource "aws_instance" "packer2" {
