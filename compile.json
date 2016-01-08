@@ -13,14 +13,14 @@
       "source_ami": "ami-5189a661",
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
-      "ami_name": "packer2 {{timestamp}}"
+      "ami_name": "packer {{timestamp}}"
     }
   ],
   "post-processors": [
     {
       "type": "atlas",
       "token": "{{user `artifact_token`}}",
-      "artifact": "kyawthetsein/packer2",
+      "artifact": "kyawthetsein/packer",
       "artifact_type": "amazon.ami",
       "metadata": {
           "created_at": "{{timestamp}}"
