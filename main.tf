@@ -1,5 +1,5 @@
-resource "atlas_artifact" "packer" {
-  name = "kyawthetsein/packer"
+resource "atlas_artifact" "packer2" {
+  name = "kyawthetsein/packer2"
   type = "amazon.ami"
   version = "1"
 }
@@ -11,7 +11,7 @@ resource "aws_instance" "packer2" {
       key = "${var.AWS_SSH_KEY}"
 
     }
-  ami = "${atlas_artifact.packer.metadata_full.region-us-west-2}"
+  ami = "${atlas_artifact.packer2.metadata_full.region-us-west-2}"
   key_name = "vagrant"
   instance_type = "t2.micro"
   provisioner "remote-exec" {
