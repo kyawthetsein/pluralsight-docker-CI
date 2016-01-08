@@ -13,7 +13,7 @@
       "source_ami": "ami-5189a661",
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
-      "ami_name": "packer {{timestamp}}"
+      "ami_name": "packer2 {{timestamp}}"
     }
   ],
   "post-processors": [
