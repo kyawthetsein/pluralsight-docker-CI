@@ -19,14 +19,14 @@ resource "aws_instance" "packer2" {
   key_name = "vagrant"
   instance_type = "t2.micro"
   
-/*  connection {
+ /* connection {
       user = "ubuntu"
       #password = "${var.USER_PASSWORD}"
       type = "ssh"
       private_key = "${var.AWS_SSH_KEY}"
 
-    }
-  provisioner "remote-exec" {
+    } */
+/*  provisioner "remote-exec" {
       
         inline = [
           "sudo apt-get -y update",
