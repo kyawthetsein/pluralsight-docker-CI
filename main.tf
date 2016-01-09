@@ -18,17 +18,17 @@ resource "aws_instance" "packer2" {
   ami = "${atlas_artifact.packer2.metadata_full.region-us-west-2}"
   key_name = "vagrant"
   instance_type = "t2.micro"
-  provisioner "remote-exec" {
-      
-      connection {
+  
+  connection {
       user = "ubuntu"
-      password = "${var.USER_PASSWORD}"
+      #password = "${var.USER_PASSWORD}"
       type = "ssh"
-      #private_key = "${var.AWS_SSH_KEY}"
+      private_key = "${var.AWS_SSH_KEY}"
 
     }
-    
-      inline = [
+  provisioner "remote-exec" {
+      
+        inline = [
           "sudo apt-get -y update",
           "sudo apt-get -y install nginx",
           "sudo service nginx start"
