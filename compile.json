@@ -2,7 +2,8 @@
   "variables": {
     "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
     "aws_secret_key": "{{env `AWS_SECRET_KEY`}}",
-    "artifact_token": "{{env `ARTIFACT_TOKEN`}}"
+    "artifact_token": "{{env `ARTIFACT_TOKEN`}}",
+    "private_key": "{{env `AWS_SSH_KEY`}}"
   },
   "builders": [
     {
@@ -13,6 +14,8 @@
       "source_ami": "ami-5189a661",
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
+      "ssh_keypair_name": "vagrant",
+      "ssh_private_key_file": "{{user `private_key`}}",
       "ami_name": "packer2 {{timestamp}}"
     }
   ],
