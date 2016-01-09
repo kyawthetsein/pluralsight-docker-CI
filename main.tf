@@ -10,7 +10,7 @@ provider "atlas" {
 
 resource "atlas_artifact" "packer2" {
   name = "kyawthetsein/packer2"
-  type = "amazon.image"
+  type = "amazon.ami"
   version = "latest"
 }
 
