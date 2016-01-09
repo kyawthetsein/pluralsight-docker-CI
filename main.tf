@@ -18,7 +18,7 @@ resource "aws_instance" "packer2" {
   connection {
       user = "ubuntu"
 
-      key = "${var.AWS_SSH_KEY}"
+      private_key = "${var.AWS_SSH_KEY}"
 
     }
   ami = "${atlas_artifact.packer2.metadata_full.region-us-west-2}"
