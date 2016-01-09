@@ -21,7 +21,7 @@
       "type": "atlas",
       "token": "{{user `artifact_token`}}",
       "artifact": "kyawthetsein/packer2",
-      "artifact_type": "amazon.image",
+      "artifact_type": "amazon.ami",
       "metadata": {
           "created_at": "{{timestamp}}"
         }
