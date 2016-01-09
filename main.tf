@@ -19,7 +19,7 @@ resource "aws_instance" "packer2" {
   key_name = "vagrant"
   instance_type = "t2.micro"
   
-  connection {
+/*  connection {
       user = "ubuntu"
       #password = "${var.USER_PASSWORD}"
       type = "ssh"
@@ -33,7 +33,7 @@ resource "aws_instance" "packer2" {
           "sudo apt-get -y install nginx",
           "sudo service nginx start"
       ]
-    } 
+    } */
 
 
   tags {
