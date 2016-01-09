@@ -23,7 +23,7 @@ resource "aws_instance" "packer2" {
       connection {
       user = "ubuntu"
       type = "ssh"
-      key_file = "${var.AWS_SSH_KEY}"
+      private_key = "${var.AWS_SSH_KEY}"
 
     }
     
