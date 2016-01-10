@@ -24,7 +24,7 @@ resource "aws_instance" "packer2" {
       user = "ubuntu"
       #password = "${var.USER_PASSWORD}"
       type = "ssh"
-      key_file = "~/.ssh/id_rsa"
+      key_file = "~/.ssh/vagrant"
 
     }
   provisioner "remote-exec" {
