@@ -25,14 +25,10 @@ resource "aws_instance" "packer2" {
       #password = "${var.USER_PASSWORD}"
       type = "ssh"
       key_file = "~/.ssh/vagrant"
+      agent = false
 
     }
-  provisioner "local-exec" {
-      command = [
-          ssh -i "${var.AWS_SSH_KEY}" ubuntu@"${atlas_artifact.packer2.metadata_full.region-us-west-2}"
-          ]
-    }
-    
+  
   provisioner "remote-exec" {
       
         inline = [
