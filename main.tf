@@ -23,7 +23,6 @@ resource "aws_instance" "packer2" {
   connection {
       user = "ubuntu"
       key_file = "~/.ssh/vagrant"
-      #password = "${var.USER_PASSWORD}"
       agent = false
 
     }
