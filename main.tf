@@ -22,7 +22,7 @@ resource "aws_instance" "packer2" {
   
   connection {
       user = "ubuntu"
-      key_file = "~/.ssh/vagrant"
+      private_key = "${var.AWS_SSH_KEY}"
       agent = false
 
     }
